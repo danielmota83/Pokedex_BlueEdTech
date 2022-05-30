@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/cadastro.css" />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <header>
+      <div class="bloco nav">
+        <nav class="navbar">
+          <img src="./img/pokemonLogo.png" class="logo" alt="logo-pokedex" />
+
+          <ul class="itens">
+            <li><a href="http://localhost:3000" class="li">HOME</a></li>
+            <li><a href=" " class="li">CADASTRO</a></li>
+         </ul>
+        </nav>
+        <div class="titulo">
+          <h1>BIBLIOTECA DE POKEMONS</h1>
+          <img src="./img/pokeball.png" class="pokeball" alt="" />
+        </div>
+      </div>
+    </header>
+    <main>
+        <section id="cadastro">
+            <h2>CADASTRE POKEMONS!</h2>
+    
+            <form id="form" action="/cadastro" method="post">
+                <div>
+                <label for="img">Link da Imagem</label>
+                <input  type="url" name="img" id="img" placeholder="Link da imagem" required/>
+            </div>
+      
+            <div>    
+            <label for="nome">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Digite o nome do Pokemon" required/>
+            </div>
+                   
+            <div> 
+                <label for="tipo">Tipo</label>
+                <input type="text" name="type" id="type" placeholder="Digite o tipo do pokemon" required/>
+            </div>
+      
+                <div> 
+                <label for="altura">Altura</label>
+                <input type="text" name="height" id="height"placeholder="Digite o altura do pokemon" required/>
+            </div>
+      
+                <div> 
+                <label for="peso">Peso</label>
+                <input type="text" name="weight" id="weight" placeholder="Digite o peso do pokemon" required/>
+            </div>
+                       
+                <div> 
+                <label for="Fraquesas">Fraquesas</label>
+                <input type="text" name="weaknesses" id="weaknesses" placeholder="Digite as fraquesas" required/>
+            </div>
+                        
+                <div> 
+                <button type="submit">CADASTRAR</button>
+            </div>
+            </form>
+        </section>
+        </main>
+        <footer>
+            <br />
+            <section>
+              <h3>Projeto 2 - Módulo II BlueEdTech - Todos os direitos reservados</h3>
+            </section>
+          </footer>
+  </body>
+</html>

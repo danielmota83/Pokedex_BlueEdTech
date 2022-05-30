@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/details.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <title>Pokedex</title>
+</head>
+<body>
+    <% pokemonAtual.forEach(element => { %>
+    
+    <main>
+        <div id="principal">
+            <div>
+                <h1> Pokemon:<%= element.name %> </h1>
+            </div>
+            <div id="cartaoFrente">
+                <div class='cartaoTopo'>
+                    <span class="id"> <%= element.id %> </span>
+                    
+                </div>
+                <div class="principal">
+                    <img src="<%= element.img %> " alt="<%= element.name %> ">
+                    <div class="nome"><%=element.name%></div>
+                   
+                </div>
+                <div class='footer'><%=element.type%></div>
+            </div>
+            <div id="cartaoAtras">
+                <div class='cartaoTopo'>
+                    <span class="id"> <%= element.id %> </span>
+                </div>
+                <div class="principal">
+                    <div class="weaknesses"> <%= element.weaknesses %> </div>
+                    
+                </div>
+                <div class='info'>
+                    <span class="peso"><%=element.weight%></span>
+                    <span class="altura"><%=element.height%></span>
+                </div>
+        </div>
+        <% }) %>
+        <a href="http://localhost:3000"><div id="botaoHome">Volte para a página principal</div></a>
+    </main>    
+</body>
+</html>

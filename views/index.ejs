@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <header>
+      <div class="bloco nav">
+        <nav class="navbar">
+          <img src="./img/pokemonLogo.png" class="logo" alt="logo-pokedex" />
+
+          <ul class="itens">
+            <li><a href="http://localhost:3000" class="li">HOME</a></li>
+            <li><a href="./cadastro" class="li">CADASTRO</a></li>
+          </ul>
+        </nav>
+        <div class="titulo">
+          <h1>BIBLIOTECA DE POKEMONS</h1>
+          <img src="./img/pokeball.png" class="pokeball" alt="" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <% pokedexArray.forEach(element => { %>
+      <a href="/detalhes/<%= element.id %> ">
+        <div class="cartao">
+          <div class="cartaoTopo">
+            <span class="id"> <%= element.id %> </span>
+          </div>
+          <div class="principal">
+            <img src="<%= element.img %> " alt="<%= element.name %> " />
+            <div class="nome"><%=element.name%></div>
+            
+          </div>
+          <div class="footer"><%=element.type%></div>
+        </div>
+      </a>
+      <% }) %>
+    </main>
+    <footer>
+      <br />
+      <section>
+        <h3>Projeto 2 - Módulo II BlueEdTech - Todos os direitos reservados</h3>
+      </section>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=McLaren&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Orbitron&family=Pangolin&family=Patrick+Hand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: acme,Fredoka;
+}
+body {
+    text-align: center;
+    background-image: linear-gradient(rgb(90, 24, 90),rgb(14, 14, 63))
+}
+h1 {
+    height: 50%;
+    color: rgb(244, 248, 21);
+    padding: 3% 5% 5%;
+        }
+
+div#principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    font-size: 1rem;
+    gap: 30px;
+    padding-bottom: 5%;
+    font-size: 1.5rem;
+}
+
+div#botaoHome {
+    color: #0d0d0d;
+	background-image: linear-gradient(pink, rgb(114, 54, 64));
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+	font-size: 19px;
+	padding: 10px;
+    width: 10rem;
+    margin: 0 auto;
+}
+div#botaoHome:hover {
+    
+	background-image: linear-gradient( #9b1681,  #ec6ed2);
+    transform: scale(1.2);
+}
+
+#cartaoFrente{
+    padding: .5rem;
+    margin: 0 5rem 4rem;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(240, 150, 150), rgb(181, 59, 59));
+    box-shadow: .1rem .1rem .1rem .1rem rgb(247, 246, 246);
+    color: rgb(8, 8, 8);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 16rem;
+    height: 27rem;
+    border-radius: 1rem;
+}
+#cartaoFrente img {
+    width: 200px;
+}
+
+#cartaoAtras{
+    padding: .5rem;
+    margin: 0 5rem 4rem;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(240, 150, 150), rgb(181, 59, 59));
+    box-shadow: .1rem .1rem .1rem .1rem rgb(247, 246, 246);
+    color: rgb(8, 8, 8);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 16rem;
+    height: 27rem;
+    border-radius: 1rem;
+}
+
+.cartaoTopo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.principal {
+    display: flex;
+    flex-direction: column;
+}
+a {
+    text-decoration: none;
+}

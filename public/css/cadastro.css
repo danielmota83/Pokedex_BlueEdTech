@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=McLaren&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Orbitron&family=Pangolin&family=Patrick+Hand&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: acme,Fredoka;
+}
+
+header {
+    background-image: linear-gradient(to bottom, rgb(69, 3, 69), darkblue);
+    background-size: cover;
+    padding: 2rem;
+    }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    width: 20%;
+}
+
+.navbar ul.itens {
+    display: flex;
+    list-style: none;
+}
+
+.li {
+    margin-left: 35px;
+    letter-spacing: 3px;
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 80%;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.li:hover{
+    cursor: pointer;
+    color: rgb(244, 248, 21);
+    background-color: rgb(0, 0, 0, 0.02);
+    transform: scale(1.1);
+}
+
+div.titulo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+div.titulo h1{
+    max-width: 50%;
+    min-height: 1px;
+    text-align: left;
+    color: rgb(244, 248, 21);
+    font-size: 2.5rem;
+    line-height: 1.5;
+    justify-content: center;
+}
+
+.pokeball{
+    width: 60%;
+}
+
+main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-image: linear-gradient(to bottom,  #2b2547, rgb(63, 35, 147));
+    width: 100%;
+    padding-top: 5%;
+}
+
+#cadastro {
+    display: flex;
+flex-direction: column;
+align-items: center;
+color: aliceblue;
+padding: 2rem;
+gap: 2rem;
+}
+
+section#cadastro form div input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: .7rem;
+  }
+
+  
+  section#cadastro h2 {
+    font-size: 2.5rem;
+    color:rgb(244, 248, 21);
+    padding: 2rem;
+  }
+
+  section#cadastro form div label {
+    font-size: 1.3rem;
+  }
+  
+  section#cadastro form button {
+    border: 1px solid #3359ec;
+    background-color: #fff;
+    color: #3359ec;
+    padding: .8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: .8rem;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    width: 65%;
+  }
+  
+  section#cadastro form button:hover {
+    background-color: #3359ec;
+    color: #fff;
+    transform: scale(1.1);
+  }
+
+  footer{
+      display: flex;
+      padding: 3rem;
+      position: fixed;
+      margin-bottom: 3px;
+  }
