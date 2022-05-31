@@ -16,7 +16,6 @@ app.listen(port, () =>
 let pokedex = {
     "pokemon": [{
       "id": 1,
-      "num": "001",
       "name": "Bulbasaur",
       "img": "http://www.serebii.net/pokemongo/pokemon/001.png",
       "type": [
@@ -34,7 +33,6 @@ let pokedex = {
       
     }, {
       "id": 2,
-      "num": "002",
       "name": "Ivysaur",
       "img": "http://www.serebii.net/pokemongo/pokemon/002.png",
       "type": [
@@ -52,7 +50,6 @@ let pokedex = {
       
     }, {
       "id": 3,
-      "num": "003",
       "name": "Venusaur",
       "img": "http://www.serebii.net/pokemongo/pokemon/003.png",
       "type": [
@@ -70,7 +67,6 @@ let pokedex = {
       
     }, {
       "id": 4,
-      "num": "004",
       "name": "Charmander",
       "img": "http://www.serebii.net/pokemongo/pokemon/004.png",
       "type": [
@@ -86,7 +82,6 @@ let pokedex = {
       
     }, {
       "id": 5,
-      "num": "005",
       "name": "Charmeleon",
       "img": "http://www.serebii.net/pokemongo/pokemon/005.png",
       "type": [
@@ -102,7 +97,6 @@ let pokedex = {
       
     }, {
       "id": 6,
-      "num": "006",
       "name": "Charizard",
       "img": "http://www.serebii.net/pokemongo/pokemon/006.png",
       "type": [
@@ -119,7 +113,6 @@ let pokedex = {
       
     }, {
       "id": 7,
-      "num": "007",
       "name": "Squirtle",
       "img": "http://www.serebii.net/pokemongo/pokemon/007.png",
       "type": [
@@ -134,7 +127,6 @@ let pokedex = {
       
     }, {
       "id": 8,
-      "num": "008",
       "name": "Wartortle",
       "img": "http://www.serebii.net/pokemongo/pokemon/008.png",
       "type": [
@@ -149,7 +141,6 @@ let pokedex = {
      
     }, {
       "id": 9,
-      "num": "009",
       "name": "Blastoise",
       "img": "http://www.serebii.net/pokemongo/pokemon/009.png",
       "type": [
@@ -164,7 +155,6 @@ let pokedex = {
       
     }, {
       "id": 10,
-      "num": "010",
       "name": "Caterpie",
       "img": "http://www.serebii.net/pokemongo/pokemon/010.png",
       "type": [
@@ -180,7 +170,6 @@ let pokedex = {
       
     }, {
       "id": 11,
-      "num": "011",
       "name": "Metapod",
       "img": "http://www.serebii.net/pokemongo/pokemon/011.png",
       "type": [
@@ -196,7 +185,6 @@ let pokedex = {
       
     }, {
       "id": 12,
-      "num": "012",
       "name": "Butterfree",
       "img": "http://www.serebii.net/pokemongo/pokemon/012.png",
       "type": [
@@ -216,26 +204,20 @@ let pokedex = {
     }, ]
   }
 
-const pokedexArray = pokedex.pokemon;
+const pokedexLista = pokedex.pokemon;
 
 
 app.get('/', (req, res) => {
     res.render('index.ejs', {
-        pokedexArray
+        pokedexLista
     })
 })
 
 app.get('/detalhes/:id', (req, res) => {
-    const pokemonAtual = pokedexArray.filter((element)=> element.id == req.params.id)
+    const pokemonAtual = pokedexLista.filter((element)=> element.id == req.params.id)
     res.render('detalhes.ejs', {
         pokemonAtual
     })
-})
-
-app.get('/index', (req, res) =>{
-  res.render('index.ejs',{
-    pokedexArray
-  })
 })
 
 app.get('/cadastro', (req, res) =>{
@@ -244,8 +226,8 @@ app.get('/cadastro', (req, res) =>{
 
 app.post("/cadastro", (req, res) => {
   const pokemon = req.body;
-  pokemon.id = (pokedexArray.length / 100 + +0.01).toFixed(2);
-  pokedexArray.push(pokemon);
+  pokemon.id = (pokedexLista.length +1);
+  pokedexLista.push(pokemon);
   message = `Pokemon Cadastrado!`;
-  res.redirect("/");
+  res.redirect("/#principal");
 });

@@ -14,7 +14,7 @@
           <img src="./img/pokemonLogo.png" class="logo" alt="logo-pokedex" />
 
           <ul class="itens">
-            <li><a href="./index" class="li">HOME</a></li>
+            <li><a href="../" class="li">HOME</a></li>
             <li><a href="./cadastro" class="li">CADASTRO</a></li>
           </ul>
         </nav>
@@ -25,7 +25,7 @@
       </div>
     </header>
     <main>
-      <% pokedexArray.forEach(element => { %>
+      <% pokedexLista.forEach(element => { %>
       <a href="/detalhes/<%= element.id %> ">
         <div class="cartao">
           <div class="cartaoTopo">
@@ -34,7 +34,6 @@
           <div class="principal">
             <img src="<%= element.img %> " alt="<%= element.name %> " />
             <div class="nome"><%=element.name%></div>
-            
           </div>
           <div class="footer"><%=element.type%></div>
         </div>
@@ -42,10 +41,7 @@
       <% }) %>
     </main>
     <footer>
-      <br />
-      <section>
-        <h3>Projeto 2 - Módulo II BlueEdTech - Todos os direitos reservados</h3>
-      </section>
+      <p>Projeto 2 - Módulo II BlueEdTech - Todos os direitos reservados</p>
     </footer>
   </body>
 </html>
