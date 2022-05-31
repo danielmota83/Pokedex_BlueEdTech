@@ -233,7 +233,9 @@ app.get('/detalhes/:id', (req, res) => {
 })
 
 app.get('/index', (req, res) =>{
-  res.render('index.ejs')
+  res.render('index.ejs',{
+    pokedexArray
+  })
 })
 
 app.get('/cadastro', (req, res) =>{
