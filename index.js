@@ -1,3 +1,4 @@
+let message = ''
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -207,9 +208,10 @@ let pokedex = {
 const pokedexLista = pokedex.pokemon;
 
 
+
 app.get('/', (req, res) => {
     res.render('index.ejs', {
-        pokedexLista
+        pokedexLista, message
     })
 })
 

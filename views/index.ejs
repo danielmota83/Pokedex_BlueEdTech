@@ -24,6 +24,12 @@
         </div>
       </div>
     </header>
+    <% if(message != ""){ %>
+      <section id="mensagem">
+        <p><%=message%></p>
+        <span id="close">&times;</span>
+      </section>
+      <% } %>
     <main>
       <% pokedexLista.forEach(element => { %>
       <a href="/detalhes/<%= element.id %> ">
@@ -43,5 +49,6 @@
     <footer>
       <p>Projeto 2 - Módulo II BlueEdTech - Todos os direitos reservados</p>
     </footer>
+    <script src="/js/script.js"></script>  
   </body>
 </html>
